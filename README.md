@@ -7,6 +7,6 @@ Welcome to my cybersecurity analysis portfolio. This repository contains my deta
 ## Index
 | Category | Challenge / Scenario | Platform | Threat / Malware | Focus Areas | Write-up |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Malware Analysis** | BRabbit | CyberDefenders | BadRabbit (Sandworm) | Phishing, C2 Traffic, MBR Corruption, Kernel Drivers | [Read Write-up](./Malware-Analysis/BadRabbit/) |
+| **Malware Analysis** | BRabbit | CyberDefenders | BadRabbit (Sandworm) | Phishing, C2 Traffic, MBR Corruption, Kernel Drivers | [Read Write-up](./Malware-Analysis/Drumbo-BadRabbit/) |
 
 
