@@ -1,0 +1,66 @@
+Malware-Analysis/Drumbo-BadRabbit/README.md
+# 🔍 Drumbo Ransomware Analysis - CyberDefenders Write-up
+##Tools Used##
+**Dynamic Analysis** Hatching Triage, Hybrid Analysis y VirusTotal
+**Static Analysis & Forensics** 'strings', 'Exiftool'
+**Threat Intelligence** MITRE ATT&CK, Malpedia
+---
+## Investigation & Walkthrough
+
+##Q1: 
+**Question** What is the suspicious email address that sent the attachment?
+**Answer** 'theceojamessmith@Drurnbo.com'
+
+
+
+##Q2: 
+**Question** What is the family name of the ransomware identified during the investigation?
+**Answer** BadRabbit
+**Anlysis** Key artifacts identified during analysis, directly align with the known signatures of the **BadRabbit** ransomware family.
+
+
+##Q3: 
+**Question** What is the name of the first file dropped by the ransomware?
+**Answer** infpub.dat
+**Analysis** The first file dropped by the ransomware during the analysis in Hatching[.]io, was infpub.dat that proceed with payload execution via "rundll32.exe".
+
+##Q4: 
+**Question** What is the only person's username found within the dropped file?
+**Answer** alex
+**Analysis** This file contains hardcode list of usernames, but the only real name is alex.
+
+##Q5:
+**Question** What MITRE ATT&CK sub-technique describes the ransomware’s use of web protocols for sending and receiving data?
+**Answer** T1071.001
+**Analysis** Network telemetry shows outbound traffic communicating over port 80 (HTTP) with the C2 server. Using standard web traffic to blend in with legitimate communications maps to **Application Layer Protocol: Web Protocols (T1071.001)**.
+
+##Q6: 
+**Question** What is the MITRE ATT&CK Sub-Technique ID associated with the ransomware’s persistence technique?
+**Answer** T1053.005
+**Analysis** The malware invokes `schtasks.exe` to register malicious scheduled tasks ensuring automatic execution on system boot prior to user authentication.
+
+##Q7: 
+**Question** What are the names of the tasks created by the ransomware during execution?
+**Answer** rhaegal, drogon
+**Analysis** In the last screenshot, we could see the task names after /TN.
+
+##Q8: 
+**Question** What suspicious message was displayed in the Console upon executing this binary?
+**Answer** Disable your anti-virus and anti-malware programs
+**Analysis** During dynamic execution analysis of `dispci.exe` via Hybrid Analysis, the binary printed an explicit prompt in the console.
+
+
+##Q9:
+**Question** What is the name of the driver used to encrypt the hard drive and modify the MBR?
+**Answer** DiskCryptor
+**Analysis** Among the created services, we can see the name "cscc," which is a file created by the malware. By running it through ExifTool, we can see that is signed and renamed driver from "DiskCryptor", that abused at kernel level to modify the MBR.
+
+##Q10: 
+**Question** What is the name of the threat actor responsible for this ransomware campaign?
+**Answer** Sandworm
+**Analysis** According to the family ransomware, the threat actor Sandworm, according to Malpedia.
+
+##Q11:
+**Question** What is the MITRE ATT&CK ID for the technique used to corrupt the system firmware and prevent booting?
+**Answer** T1495
+**Analysis** By corrupting low-level boot components and overwriting the MBR, the malware renders the victim machine unbootable (Firmware Corruption).
