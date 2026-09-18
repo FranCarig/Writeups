@@ -8,5 +8,5 @@ Welcome to my cybersecurity analysis portfolio. This repository contains my deta
 | Category | Challenge / Scenario | Platform | Threat / Malware | Focus Areas | Write-up |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Malware Analysis** | BRabbit | CyberDefenders | BadRabbit (Sandworm) | Phishing, C2 Traffic, MBR Corruption, Kernel Drivers | [Read Write-up](./Malware-Analysis/Drumbo-BadRabbit/) |
-
+| **Incident Analysis** | XWorm Infection | Malware-Traffic-Analysis | Obfuscated JS Dropper & C2 | Phishing, Process Hollowwing, C2 Traffic, LOTL (Living off the Land) | [Read Write-up](./Malware-Analysis/XWORM-Infection) |
 
