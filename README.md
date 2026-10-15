@@ -13,3 +13,7 @@ Welcome to my cybersecurity analysis portfolio. This repository contains my deta
 | **Incident Analysis** | Tomcat Takeover | CyberDefenders | Tomcat Webshell | Network Forensics & HTTP Traffic Analysis | [Read Write-up](./Malware-Analysis/Tomcat/)
 | **Threat Intelligence** | GrabThePhisher | CyberDefenders | Phishing Kit | Code Analysis, Web3 Threats & Phishing | [Read Write-up](./Malware-Analysis/GrabThePhisher/)
 | **Malware Analysis** | Yellow RAT | CyberDefenders | C2 Server | IOC Sweeping, Threat Intel Correlation & C2 Mapping |  [Read Write-up](./Malware-Analysis/YellowRAT/)
+| **Digital Forensic** | Ramnit | CyberDefenders | Memory dump | Memory Forensics & Volatility3 | [Read Write-Up](./Malware-Analysis/Ramnit/)
+| **Threat Intelligence** | Redline Stealer | CyberDefenders | Redline | C2 Infrastructure Analysis, Artifact Extraction & Threat Intel Correlation | [Read Write-Up](./Malware-Analysis/Redline_Stealer/)
+| **Threat Intelligence** | Oski | CybeDefenders | Oski stealer | Sandbox Telemetry Analysis, C2 Mapping & IoC Extraction | [Read Write-Up](./Malware-Analysis/Oski/)
+
